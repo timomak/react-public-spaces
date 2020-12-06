@@ -3,12 +3,14 @@ import React from "react";
 import "./App.css";
 import Title from "./Title";
 import POPOSList from "./POPOList";
+import Footer from "./Footer";
 
 function App() {
   return (
     <div className="App">
       <Title />
       <POPOSList />
+
       {/* <img src={logo} className="App-logo" alt="logo" /> */}
       {/* <header className="App-header"> */}
       {/* <img src={logo} className="App-logo" alt="logo" />
@@ -24,6 +26,7 @@ function App() {
           Learn React
         </a> */}
       {/* </header> */}
+      <Footer />
     </div>
   );
 }
