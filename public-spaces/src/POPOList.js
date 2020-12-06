@@ -1,11 +1,25 @@
 import React from "react";
 import POPOSSpace from "./POPOSSpace";
 import "./POPOList.css";
+import data from "./sfpopos-data.json";
 
 function POPOSList() {
+  const spaces = data.map(({ title, address, images, hours }) => {
+    return (
+      <POPOSSpace
+        key={title}
+        name={title}
+        address={address}
+        image={images[0]}
+        hours={hours} // add a new prop for hours here
+      />
+    );
+  });
+
   return (
     <div className="POPOSList">
-      <POPOSSpace
+      {spaces}
+      {/* <POPOSSpace
         name="50 California Street"
         address="50 California St."
         image="50-california-st.jpg"
@@ -34,7 +48,7 @@ function POPOSList() {
         name="Citigroup Center"
         address="1 Sansome St."
         image="citigroup-center.jpg"
-      />
+      /> */}
     </div>
   );
 }
