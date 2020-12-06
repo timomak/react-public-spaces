@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import POPOSSpace from "./POPOSSpace";
 import "./POPOList.css";
 import data from "./sfpopos-data.json";
 
 function POPOSList() {
+  const [query, setQuery] = useState("");
+
   const spaces = data.map(({ title, address, images, hours }, i) => {
     return (
       <POPOSSpace
